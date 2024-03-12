@@ -1,23 +1,56 @@
 <?php
+    class Buku extends Controller{
+        public function index(){
+            $data['judul'] = 'Data Buku';
+            $data['buku'] = $this->model('BukuModel')->getAllBuku();
+            $this->view('templates/header', $data);
+            $this->view('buku/index', $data);
+            $this->view('templates/footer');
+        }
 
-class Buku extends Controller {
+        public function tambah(){
+            $data['judul'] = 'Tambah Buku';
+            $this->view('templates/header', $data);
+            $this->view('buku/create');
+            $this->view('templates/footer');
+        }
 
-    public function index() {
-        $data['judul'] = "Daftar Buku";
-        $data['buku'] = $this->model('Buku_model')->getAllBuku();
-        $this->view('templates/header', $data);
-        $this->view('buku/index', $data);
-        $this->view('templates/footer');
-    }
+        public function simpanBuku(){
+            if($this->model('BukuModel')->tambahBuku($_POST) > 0){
+                header('location: ' . BASE_URL . '/buku/index');
+                exit;
+            }else{
+                header('location: ' . BASE_URL . '/buku/index');
+                exit;
+            }
+        }
 
-    public function detail($id) {
-        $data['judul'] = "Detail Buku";
-        $data['buku'] = $this->model('Buku_model')->geBukubyId($id);
-        $this->view('templates/header', $data);
-        $this->view('buku/detail', $data);
-        $this->view('templates/footer');
+        public function edit($id){
+            $data['judul'] = 'Edit Buku';
+            $data['buku'] = $this->model('BukuModel')->getBukuById($id);
+            $this->view('templates/header', $data);
+            $this->view('buku/edit', $data);
+            $this->view('templates/footer');
+        }
+
+        public function updateBuku(){
+            if($this->model('BukuModel')->updateDataBuku($_POST) > 0){
+                header('location: ' .   BASE_URL . '/buku/index');
+                exit;
+            }else{
+                header('location: ' .   BASE_URL . '/buku/index');
+                exit;
+            }
+        }
+
+        public function hapus($id){
+            if($this->model('BukuModel')->deleteBuku($id) > 0){
+                header('location: ' . BASE_URL . '/buku/index');
+                exit;
+            }else{
+                header('location: ' . BASE_URL . '/buku/index');
+                exit;
+            }
+        }
     }
-    public function tambah() {
-        
-    }
-}
+?>
