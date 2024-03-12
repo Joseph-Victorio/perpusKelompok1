@@ -7,4 +7,4 @@ define('BASEURL', "http://localhost:8080/kelompok-1/public/");
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', 'password');
-define('DB_NAME', 'perpukelompok1');
+define('DB_NAME', 'perpuskelompok1');
