@@ -1,7 +1,7 @@
 :root{
     --background:#F9EFDB;
     --primary-color:#F6995C;
-    --secondary-colo:#124076;
+    --secondary-color:#124076;
 }
 body{
     margin: 0;
@@ -13,4 +13,21 @@ body{
 .hero{
     background-image: url('../img/abstractBackground.jpg');
     background-size: cover;
+}
+.text-blue{
+    color: var(--secondary-color);
+}
+.btn-lebih-lanjut{
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+    transition: .3s ease-in-out;
+}
+.btn-lebih-lanjut:hover{
+    background-color: #f8863a;
+    border-radius: 0;
 }
