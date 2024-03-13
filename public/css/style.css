@@ -17,7 +17,7 @@ body{
 .text-blue{
     color: var(--secondary-color);
 }
-.btn-lebih-lanjut{
+.btnKu{
     background-color: var(--primary-color);
     color: white;
     font-weight: bold;
@@ -27,7 +27,15 @@ body{
     padding: 10px 20px 10px 20px;
     transition: .3s ease-in-out;
 }
-.btn-lebih-lanjut:hover{
+.btnKu:hover{
     background-color: #f8863a;
     border-radius: 0;
+}
+.search:active{
+    outline: #124076;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-color);
 }
