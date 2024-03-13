@@ -39,3 +39,6 @@ a{
     text-decoration: none;
     color: var(--primary-color);
 }
+.category-card:hover{
+    box-shadow: 5px 10px;
+}

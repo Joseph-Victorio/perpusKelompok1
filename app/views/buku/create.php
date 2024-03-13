@@ -1,6 +1,6 @@
 <div class="container">
   <h3 class="mb-3">Tambah Buku</h3>
-  <form action="<?= BASE_URL; ?>/buku/simpanbuku" method="post">
+  <form action="<?= BASEURL; ?>/buku/simpanbuku" method="post">
   <div class="class-body">
     <div class="form-group mb-3">
       <label for="judul" class="form-label">Judul</label>

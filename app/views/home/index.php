@@ -7,7 +7,7 @@
     </div>
         <!-- KANAN -->
     <div>
-        <h1 class="text-blue fw-bold">Kumpulan Buku Programming Terbaik</h1>
+        <h1 class="text-blue fw-bold">Perpustakaan Online Dengan Kumpulan Buku Terbaik</h1>
         <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit fuga porro excepturi deserunt nihil optio corrupti consequatur placeat velit perspiciatis.
         </p>
@@ -26,41 +26,50 @@
 <br>
 <!-- Book Category -->
 <div class="category text-blue mt-5 mb-5">
-    <h2 class="text-center">Category Buku</h2>
+    <h2 class="text-center">Top Books</h2>
 </div>
-<div class="d-flex p-4 m-4 justify-content-center gap-4 fw-bold">
-    <div class="category-card p-2 d-flex flex-col">
-        <a href="">
-            <img src="" alt="">
-            HTML
-        </a>
-    </div>
-    <div class="category-card p-2  ">
-        <a href="" class="d-flex flex-column gap-2 align-items-center">
-            <div class="w-25">
-                <img class="w-100" src="https://www.php.net//images/logos/new-php-logo.svg" alt="">
+<div class=" mx-auto">
+    <div class="d-flex gap-4 p-4">
+        <div class="card p-2 bg-merah-pastel" style="width: 18rem;">
+            <div class="img-container w-75 mx-auto">
+                <img src="https://i.pinimg.com/564x/76/66/84/7666840a23cded4a54f7c0c089bce761.jpg" class="card-img-top w-100 " alt="...">
             </div>
-            <p>PHP</p>
-        </a>
-    </div>
-    <div class="category-card p-2 d-flex flex-col">
+        <div class="card-body">
+            <h5 class="card-title">Waves</h5>
+            <p class="card-text">Ingrid Chabbert & Carole Maurel</p>
+            
+        </div>
+        </div>
+        <div class="card p-2 bg-merah-pastel" style="width: 18rem;">
+            <div class="img-container w-75 mx-auto">
+                <img src="https://i.pinimg.com/564x/76/66/84/7666840a23cded4a54f7c0c089bce761.jpg" class="card-img-top w-100 " alt="...">
+            </div>
+        <div class="card-body">
+            <h5 class="card-title">Waves</h5>
+            <p class="card-text">Ingrid Chabbert & Carole Maurel</p>
+            
+        </div>
+        </div>
+        <div class="card p-2 bg-merah-pastel" style="width: 18rem;">
+            <div class="img-container w-75 mx-auto">
+                <img src="https://i.pinimg.com/564x/76/66/84/7666840a23cded4a54f7c0c089bce761.jpg" class="card-img-top w-100 " alt="...">
+            </div>
+        <div class="card-body">
+            <h5 class="card-title">Waves</h5>
+            <p class="card-text">Ingrid Chabbert & Carole Maurel</p>
+            
+        </div>
+        </div>
+        <div class="card p-2 bg-merah-pastel" style="width: 18rem;">
+            <div class="img-container w-75 mx-auto">
+                <img src="https://i.pinimg.com/564x/76/66/84/7666840a23cded4a54f7c0c089bce761.jpg" class="card-img-top w-100 " alt="...">
+            </div>
+        <div class="card-body">
+            <h5 class="card-title">Waves</h5>
+            <p class="card-text">Ingrid Chabbert & Carole Maurel</p>
+            
+        </div>
+        </div>
         
-        <a href="">
-            <img src="" alt="">
-            Python
-        </a>
-    </div>
-    <div class="category-card p-2 d-flex flex-col">
-        
-        <a href="">
-            <img src="" alt="">
-            Javascript
-        </a>
-    </div>
-    <div class="category-card p-2 d-flex flex-col">
-        <a href="">
-            <img src="" alt="">
-            CSS
-        </a>
     </div>
 </div>
