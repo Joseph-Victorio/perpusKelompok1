@@ -2,7 +2,7 @@
     class Buku extends Controller{
         public function index(){
             $data['judul'] = 'Data Buku';
-            $data['buku'] = $this->model('BukuModel')->getAllBuku();
+            $data['buku'] = $this->model('Buku_model')->getAllBuku();
             $this->view('templates/header', $data);
             $this->view('buku/index', $data);
             $this->view('templates/footer');

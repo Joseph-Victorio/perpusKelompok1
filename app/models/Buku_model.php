@@ -1,5 +1,5 @@
 <?php
-    class BukuModel{
+    class Buku_model{
         private $table = 'tb_buku';
         private $db;
 
