@@ -30,6 +30,6 @@
        
           </ul>
     </div>
-    <button class="btn btn-outline-primary"><a href="<?=BASEURL;?>login"></a>Login</button>
+    <button class="btn btn-outline-primary"><a href="<?=BASEURL;?>/login"></a>Login</button>
   </div>
 </nav>
