@@ -6,6 +6,7 @@
     <title>Halaman <?= $data['judul'];?></title>
     
     <link rel="stylesheet" href="<?=BOOTSTRAP?>">
+    <link rel="stylesheet" href="<?=BASEURL?>/css/style.css">
 </head>
 <body>
 

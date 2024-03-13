@@ -1,0 +1,16 @@
+:root{
+    --background:#F9EFDB;
+    --primary-color:#F6995C;
+    --secondary-colo:#124076;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.bg-merah-pastel{
+    background-color: var(--background);
+}
+.hero{
+    background-image: url('../img/abstractBackground.jpg');
+    background-size: cover;
+}
