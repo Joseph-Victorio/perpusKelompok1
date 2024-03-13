@@ -17,10 +17,10 @@
 
         public function simpanBuku(){
             if($this->model('BukuModel')->tambahBuku($_POST) > 0){
-                header('location: ' . BASE_URL . '/buku/index');
+                header('location: ' . '<?=BASE_URL?> '. '/buku/index');
                 exit;
             }else{
-                header('location: ' . BASE_URL . '/buku/index');
+                header('location: ' . '<?=BASE_URL?> '. '/buku/index');
                 exit;
             }
         }
@@ -35,20 +35,20 @@
 
         public function updateBuku(){
             if($this->model('BukuModel')->updateDataBuku($_POST) > 0){
-                header('location: ' .   BASE_URL . '/buku/index');
+                header('location: ' .   '<?=BASE_URL?> ' . '/buku/index');
                 exit;
             }else{
-                header('location: ' .   BASE_URL . '/buku/index');
+                header('location: ' .  '<?=BASE_URL?> ' . '/buku/index');
                 exit;
             }
         }
 
         public function hapus($id){
             if($this->model('BukuModel')->deleteBuku($id) > 0){
-                header('location: ' . BASE_URL . '/buku/index');
+                header('location: ' . '<?=BASE_URL?> ' . '/buku/index');
                 exit;
             }else{
-                header('location: ' . BASE_URL . '/buku/index');
+                header('location: ' . '<?=BASE_URL?> ' . '/buku/index');
                 exit;
             }
         }
