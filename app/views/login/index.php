@@ -1,53 +1,34 @@
-<!-- application/views/login_view.php -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman <?= $data['judul'];?></title>
-    
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Admin </title>
+    <link rel="stylesheet" href="../public/css/login.css">
     <link rel="stylesheet" href="<?=BOOTSTRAP?>">
     <link rel="stylesheet" href="<?=BASEURL?>/css/style.css">
-</head>
-<body>
-    <section class="vh-100" style="background-color: #fff;">
-    <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-            <div class="card shadow-2-strong" style="border-radius: 0.5rem;">
-            <div class="card-body p-5 text-center">
-
-                <h3 class="mb-5">Sign in</h3>
-
-                <div class="form-outline mb-4">
-                <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
-                <label class="form-label" for="typeEmailX-2">Email</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
-                <label class="form-label" for="typePasswordX-2">Password</label>
-                </div>
-
-                <!-- Checkbox -->
-                <div class="form-check d-flex justify-content-start mb-4">
-                <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
-                <label class="form-check-label" for="form1Example3"> Remember password </label>
-                </div>
-
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-
-                <hr class="my-4">
-
-                <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
-                type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
-                <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;"
-                type="submit"><i class="fab fa-facebook-f me-2"></i>Sign in with facebook</button>
-
-            </div>
-            </div>
-        </div>
-        </div>
+  </head>
+  <body>
+    <div class="center">
+    <div class="img-container w-75 ">
+        <img src="<?=BASEURL?>/img/booksWithLogoCS.png" class="w-100" alt="" sizes="32x32">
     </div>
-    </section>    
-</body>
+      <h1>Login Admin </h1>
+      <form method="post">
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <input type="submit" value="Login">
+        <br></br>
+    </div>
+      </form>
+    </div>
+    <img src="<?=BASEURL?>/img/curve.svg" class="w-100 z-1" alt="">
+  </body>
+</html>
