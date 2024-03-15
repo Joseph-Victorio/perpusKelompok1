@@ -3,45 +3,39 @@
 class Login extends Controller {
 
     public function __construct() {
-        parent::__construct();
-        $this->load->model('admin_model');
+        $this->model("User_model");
     }
 
     public function index() {
-        // Jika sudah login, arahkan ke halaman dashboard
-        if ($this->session->userdata('logged_in')) {
-            redirect('dashboard');
-        }
-
-        // Jika belum submit form login, tampilkan halaman login
-        if (!$this->input->post('submit')) {
-            $this->load->view('login_form');
-            return;
-        }
-
-        // Proses login
-        $username = $this->input->post('username');
-        $password = $this->input->post('password');
-
-        $user = $this->admin_model->getUserByUsername($username);
-
-        if (!$user || $user['password'] !== $password) {
-            // Jika login gagal, tampilkan pesan error
-            $data['error'] = 'Username atau password salah.';
-            $this->load->view('login_form', $data);
-            return;
-        }
-
-        // Login berhasil, set session dan arahkan ke halaman dashboard
-        $this->session->set_userdata('logged_in', true);
-        $this->session->set_userdata('username', $username);
-        redirect('dashboard');
+        $this->view("login/index");
     }
 
-    public function logout() {
-        // Logout, hapus session, dan arahkan ke halaman login
-        $this->session->unset_userdata('logged_in');
-        $this->session->unset_userdata('username');
-        redirect('login');
+    public function processLogin() {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Ambil data dari form login
+            $username = $_POST["username"];
+            $password = $_POST["password"];
+
+            // Panggil model User_model untuk melakukan pengecekan login
+            $user_model = $this->model("User_model");
+            $user = $user_model->getUserByUsername($username);
+
+            // Verifikasi login
+            if ($user && password_verify($password, $user["password"])) {
+                // Login berhasil, set session atau tindakan lain yang sesuai
+                $_SESSION["user_id"] = $user["id"];
+                // Redirect ke halaman setelah login berhasil
+                header("Location: /dashboard");
+                exit;
+            } else {
+                // Login gagal, arahkan kembali ke halaman login dengan pesan kesalahan
+                $this->view("login/index", ["error" => "Username atau password salah"]);
+            }
+        } else {
+            // Jika bukan request POST, redirect kembali ke halaman login
+            header("Location: /login/index");
+            exit;
+        }
     }
 }
+?>
