@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 <?php
 
 class Login extends Controller
