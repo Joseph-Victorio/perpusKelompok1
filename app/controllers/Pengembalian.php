@@ -42,7 +42,7 @@ class Pengembalian extends Controller{
     public function updatePengembalian(){
         if($this->model('Pengembalian_model')->updateData($_POST)>0){
             header('location: http://localhost:8080/perpuskelompok1/public/pengembalian-buku/');
-            exit;
+
         }
     }
     
