@@ -42,3 +42,24 @@ a{
 .category-card:hover{
     box-shadow: 5px 10px;
 }
+.text-center{
+    text-align: center;
+}
+.ml-100{
+    margin-left: 100px;
+}
+.mr-100{
+    margin-right: 100px;
+}
+.absolute{
+    position: absolute;
+}
+.right-4{
+    right: 20px;
+}
+.top-4{
+    top:20px;
+}
+.mx-auto{
+    margin: 0 auto;
+}
