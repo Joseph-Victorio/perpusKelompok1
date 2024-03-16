@@ -1,35 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman <?= $data['judul'];?></title>
-    
-    <link rel="stylesheet" href="<?=BOOTSTRAP?>">
+<title>Dashboard <?= $data['judul'];?></title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="<?=BASEURL?>/css/admin.css">
     <link rel="stylesheet" href="<?=BASEURL?>/css/style.css">
 </head>
 <body>
+  <!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="<?=BASEURL;?>/admin" class="brand">
+			<i class='bx bx-book'></i>
+			<span class="text">Perpustakaan Kanan</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">	
+				<a aria-current="page" href="<?=BASEURL;?>/admin">
+					<i class='bx bxs-home' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="<?=BASEURL;?>/buku">
+                    <i class='bx bxs-book'></i>
+					<span class="text">Buku</span>
+				</a>
+			</li>
+			<li>
+				<a href="<?=BASEURL;?>/mahasiswa">
+					<i class='bx bxs-user' ></i>
+					<span class="text">Mahasiswa</span>
+				</a>
+			</li>
+			<li>
+				<a href="<?=BASEURL;?>/peminjaman">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Peminjaman</span>
+				</a>
+			</li>
+			<li>
+				<a href="<?=BASEURL;?>/pengembalian">
+					<i class='bx bxs-book' ></i>
+					<span class="text">Pengembalian</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="<?=BASEURL;?>/login" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary p-4">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Perpustakaan Kanan</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="<?=BASEURL;?>/home">Home</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="<?=BASEURL;?>/about">About</a>
-            </li> -->
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="<?=BASEURL;?>/buku">Buku</a>
-            </li>
-       
-          </ul>
-    </div>
-    <button class="btn btn-outline-primary"><a href="<?=BASEURL;?>/login"></a>Login</button>
-  </div>
-</nav>
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+		</ul>
+		</nav>
+		<!-- NAVBAR -->
+</section>
+<script src="../public/js/script.js"></script>
+
+</body>
+</html>

@@ -16,8 +16,8 @@
 </div>
 <img src="<?=BASEURL?>/img/curve.svg" class="w-100 z-1" alt="">
     <!-- Search Books -->
-<div class="w-50 mx-auto z-2 position-absolute translate-middle-y top-100 start-0 end-0 bottom-0 mb-5">
-    <form class="form-inline my-2  my-lg-0 d-flex gap-2 top-100 ">
+<div class="w-50 mx-auto position-absolute top-100 start-50 translate-middle-x mt-5">
+    <form class="form-inline my-2  my-lg-0 d-flex gap-2">
         <input class="form-control mr-sm-2" type="search" placeholder="Search book" aria-label="Search">
         <button class="btnKu my-2 my-sm-0" type="submit">Search</button>
     </form>
