@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 <?php 
 
 class Mahasiswa_model{
@@ -37,4 +36,4 @@ class Mahasiswa_model{
         $this->db->execute();
     }
 }
->>>>>>> Stashed changes
+

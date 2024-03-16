@@ -2,17 +2,16 @@
 
 class User_model{
     private $table = 'admin';
-<<<<<<< Updated upstream
+
     private $db; 
-=======
-    private $db;
->>>>>>> Stashed changes
+
+
 
     public function __construct() {
         $this->db = new Database;
     }
 
-<<<<<<< Updated upstream
+
     //Method verifikasi login
     public function verify_login($username, $password) {
         //query databse untk mencari username
@@ -40,9 +39,6 @@ class User_model{
         $this->db->query("SELECT * FROM $this->table WHERE username = :username");
         $this->db->bind(':username', $username);
         return $this->db->single();
-=======
-    public function verify_login($username, $password) {
-        $this->db->query("SELECT * FROM $this->table WHERE username = :username");
->>>>>>> Stashed changes
     }
+    
 }

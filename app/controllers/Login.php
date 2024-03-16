@@ -51,5 +51,5 @@ class Login extends Controller
         }
     }
 }
-=======
->>>>>>> Stashed changes
+
+
