@@ -13,37 +13,39 @@
         }
 
         public function getBukuById($id){
-            $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
-            $this->db->bind('id', $id);
+            $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id_buku=:id_buku');
+            $this->db->bind('id_buku', $id);
             return $this->db->single();
         }
 
         public function tambahBuku($data){
-            $query = "INSERT INTO   tb_buku (judul, penulis, tgl_selesai) VALUES(:judul, :penulis, :tgl_selesai)";
+            $query = "INSERT INTO   tb_buku (judul_buku, penulis_buku, penerbit_buku, tahun_terbit ) VALUES(:judul_buku, :penulis_buku, :penerbit_buku, :tahun_terbit)";
             $this->db->query($query);
-            $this->db->bind('judul', $data['judul']);
-            $this->db->bind('penulis', $data['penulis']);
-            $this->db->bind('tgl_selesai', $data['tgl_selesai']);
+            $this->db->bind('judul_buku', $data['judul_buku']);
+            $this->db->bind('penulis_buku', $data['penulis_buku']);
+            $this->db->bind('penerbit_buku', $data['penerbit_buku']);
+            $this->db->bind('tahun_terbit', $data['tahun_terbit']);
             $this->db->execute();
             
             return $this->db->rowCount();
         }
         
         public function updateDataBuku($data){
-            $query = "UPDATE tb_buku SET judul=:judul, penulis=:penulis, tgl_selesai=:tgl_selesai WHERE id=:id";
+            $query = "UPDATE tb_buku SET judul_buku=:judul_buku, penulis_buku=:penulis_buku, penerbit_buku=:penerbit_buku, tahun_terbit=:tahun_terbit WHERE id=:id";
             $this->db->query($query);
-            $this->db->bind('id', $data['id']);
-            $this->db->bind('judul', $data['judul']);
-            $this->db->bind('penulis', $data['penulis']);
-            $this->db->bind('tgl_selesai', $data['tgl_selesai']);
+            $this->db->bind('id_buku', $data['id_buku']);
+            $this->db->bind('judul_buku', $data['judul_buku']);
+            $this->db->bind('penulis_buku', $data['penulis_buku']);
+            $this->db->bind('penerbit_buku', $data['penerbit_buku']);
+            $this->db->bind('tahun_terbit', $data['tahun_terbit']);
             $this->db->execute();
 
             return $this->db->rowCount();
         }
 
         public function deleteBuku($id){
-            $this->db->query("DELETE FROM " . $this->table . ' WHERE id=:id');
-            $this->db->bind('id', $id);
+            $this->db->query("DELETE FROM " . $this->table . ' WHERE id_buku=:id_buku');
+            $this->db->bind('id_buku', $id);
             $this->db->execute();
 
             return $this->db->rowCount();

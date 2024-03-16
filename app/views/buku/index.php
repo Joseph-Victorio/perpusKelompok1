@@ -1,9 +1,15 @@
-<div class="container">
-    <h3 class="mb-3">Daftar Buku</h3>
+
+<!--MAIN-->
+<main></main>
+<div class="head-title">
+    <div class="left">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h1 class="mb-3">Daftar Buku</h1>
     <br>
         <a href="<?= BASEURL ?>/buku/tambah" class="btn btn-primary">Tambah Buku</a>
     <br>
     <br>
+
     <table class="table table-succes table-striped table-bordered">
         <thead>
             <tr>
@@ -31,3 +37,4 @@
         </tbody>
     </table>
 </div>
+</main>
