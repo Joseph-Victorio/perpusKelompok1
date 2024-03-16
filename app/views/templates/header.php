@@ -34,7 +34,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="<?=BASEURL;?>/peminjaman-buku">
+				<a href="<?=BASEURL;?>/peminjaman">
 					<i class='bx bxs-cog' ></i>
 					<span class="text">Peminjaman</span>
 				</a>

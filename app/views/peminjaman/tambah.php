@@ -1,8 +1,8 @@
 <div class="ml-100 mr-100">
-    <h1 class="text-center">Tambah Data Pengembalian</h1>
+    <h1 class="text-center">Tambah Data Peminjaman</h1>
     <br>
     <br>
-    <form action="<?=BASEURL ?>/peminjaman-buku/simpanPeminjaman" method="POST" class="mx-auto">
+    <form action="<?=BASEURL ?>/peminjaman/simpanPeminjaman" method="POST" class="mx-auto">
         <div class="flex text-center">
             <label for="tgl_pinjam">Tanggal Peminjaman: </label>
             <input type="date" name="tgl_pinjam" id="tgl_pinjam">

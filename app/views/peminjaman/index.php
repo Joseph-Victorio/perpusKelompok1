@@ -16,7 +16,7 @@
 <h1 class="text-center">Peminjaman Buku</h1>
 <br>
 <br>
-<a href="<?=BASEURL?>/pengembalian-buku/tambah" class="btnKu absolute right-4">Tambah Data</a>
+<a href="<?=BASEURL?>/peminjaman/tambah" class="btnKu absolute right-4">Tambah Data</a>
 <br><br><br>
 <div class="ml-100 mr-100">
     <table>
@@ -31,9 +31,9 @@
     </tr>
     <?php foreach($data['buku'] as $buku) :          ?>
     <tr>
-        <td><?=$buku['idpengembalian'];?></td>
-        <td><?=$buku['tanggal_peminjaman'];?></td>
-        <td><?=$buku['tanggal_pengembalian'];?></td>
+        <td><?=$buku['id_peminjaman'];?></td>
+        <td><?=$buku['tanggal_pinjam'];?></td>
+        <td><?=$buku['tanggal_kembali'];?></td>
         <td><?=$buku['id_admin'];?></td>
         <td><?=$buku['id_buku'];?></td>
         <td><?=$buku['id_mhs'];?></td>
