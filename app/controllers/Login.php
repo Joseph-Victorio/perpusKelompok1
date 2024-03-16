@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?php
 
 class Login extends Controller
@@ -50,3 +51,5 @@ class Login extends Controller
         }
     }
 }
+=======
+>>>>>>> Stashed changes
