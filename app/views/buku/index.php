@@ -1,40 +1,46 @@
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
 
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
 <!--MAIN-->
-<main></main>
-<div class="head-title">
-    <div class="left">
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-    <h1 class="mb-3">Daftar Buku</h1>
-    <br>
-        <a href="<?= BASEURL ?>/buku/tambah" class="btn btn-primary">Tambah Buku</a>
-    <br>
-    <br>
-
-    <table class="table table-succes table-striped table-bordered">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Judul</th>
-                <th scope="col">Penulis</th>
-                <th scope="col">Tanggal Selesai</th>
-                <th scope="col">Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php $no=1; ?>
-            <?php foreach($data['buku'] as $row) :?>
-                <tr>
-                    <td><?= $no; ?></td>
-                    <td><?= $row['judul']; ?></td>
-                    <td><?= $row['penulis']; ?></td>
-                    <td><?= $row['tgl_selesai']; ?></td>
-                    <td>
-                        <a href="<?= BASEURL ?>/buku/edit/<?= $row['id']?>" class="btn btn-primary">Edit</a>
-                        <a href="<?= BASEURL ?>/buku/hapus/<?= $row['id']?>" class="btn btn-danger" onclick="return confirm('Hapus data?')">Hapus</a>
-                    </td>
-                </tr>
-                <?php $no++; endforeach; ?>
-        </tbody>
+<h1 class="text-center">Buku</h1>
+<br>
+<br>
+<a href="<?=BASEURL?>/buku/tambah" class="btnKu absolute right-4">Tambah Data</a>
+<br><br><br>
+<div class="ml-100 mr-100">
+    <table>
+    <tr>
+        <th>Judul Buku</th>
+        <th>penulis Buku</th>
+        <th>Penerbit</th>
+        <th>Tahun Terbit</th>
+        <th>Opsi</th>
+    </tr>
+    <?php foreach($data['buku'] as $buku) :          ?>
+    <tr>
+        <td><?=$buku['judul_buku'];?></td>
+        <td><?=$buku['penulis_buku'];?></td>
+        <td><?=$buku['penerbit_buku'];?></td>
+        <td><?=$buku['tahun_terbit'];?></td>
+        <td>
+            <a href="<?= BASEURL ?>/peminjaman/editPeminjaman<?= $buku['id_peminjaman']?>" ><i class='bx bxs-edit-alt' style='color:#00ff13'  ></i></a>
+            <a href="<?= BASEURL ?>/peminjaman/delete/<?= $buku['id_peminjaman']?>"  onclick="confirm('Hapus data Pengembalian?')"><i class='bx bxs-trash' style='color:#ff0000'  ></i></a>
+        </td>
+    </tr>
+    <?php endforeach; ?>
+    
     </table>
+
+
 </div>
-</main>

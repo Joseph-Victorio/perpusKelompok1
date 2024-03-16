@@ -16,7 +16,7 @@
 		</a>
 		<ul class="side-menu top">
 			<li class="active">	
-				<a aria-current="page" href="<?=BASEURL;?>/admin">
+				<a aria-current="page" href="<?=BASEURL;?>/dashboard">
 					<i class='bx bxs-home' ></i>
 					<span class="text">Dashboard</span>
 				</a>
