@@ -9,9 +9,6 @@ class Pengembalian extends Controller{
         $data['buku'] = $this->model('Buku_Model');
         $data['mahasiswa'] = $this->model('Mahasiswa_model');
 
-        $data['buku']= $this->model('Pengembalian_model')->getAllPengembalian();
-
-
         $this->view('pengembalian/index', $data);
     }
     public function tambah(){
