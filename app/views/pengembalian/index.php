@@ -95,7 +95,7 @@
     <?php foreach($data['pengembalian'] as $kembali) :          ?>
         <tbody>
     <tr>
-    <td><?=$kembali['id_pengembalian'];?></td>
+        <td><?=$kembali['id_pengembalian'];?></td>
         <td><?=$kembali['tgl_pengembalian'];?></td>
         <td><?=$data['admin']->getAdminNameById($kembali['id_admin']);?></td>
         <td><?=$data['buku']->getBukuNameById($kembali['id_buku']);?></td>

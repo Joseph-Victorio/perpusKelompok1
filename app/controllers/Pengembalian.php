@@ -3,10 +3,14 @@
 class Pengembalian extends Controller{
     public function index(){
         $data['judul'] = 'Halaman Pengembalian Buku';
+
         $data['pengembalian']= $this->model('Pengembalian_model')->getAllPengembalian();
         $data['admin'] = $this->model('Admin_model');
         $data['buku'] = $this->model('Buku_Model');
         $data['mahasiswa'] = $this->model('Mahasiswa_model');
+
+        $data['buku']= $this->model('Pengembalian_model')->getAllPengembalian();
+
 
         $this->view('pengembalian/index', $data);
     }
@@ -38,7 +42,7 @@ class Pengembalian extends Controller{
     public function editPengembalian($id){
         $data['buku']= $this->model('Pengembalian_model')->getPengembalianById($id);
         $data['judul']='Halaman Edit Data Pengembalian';
-        $this->view('templates/header', $data);
+
         $this->view('pengembalian-buku/edit', $data);
 
     }

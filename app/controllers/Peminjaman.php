@@ -3,10 +3,14 @@
 class Peminjaman extends Controller{
     public function index(){
         $data['judul'] = 'Halaman Peminjaman Buku';
+
         $data['peminjaman']= $this->model('Peminjaman_model')->getAllpeminjaman();
         $data['admin'] = $this->model('Admin_model');
         $data['buku'] = $this->model('Buku_model');
         $data['mahasiswa'] = $this->model('Mahasiswa_model');
+
+        $data['buku']= $this->model('Peminjaman_model')->getAllpeminjaman();
+
 
         $this->view('peminjaman/index', $data);
     }
