@@ -3,12 +3,7 @@
         public function index(){
             $data['judul'] = 'Data Buku';
             $data['buku'] = $this->model('Buku_model')->getAllBuku();
-
-
             $this->view('buku/index', $data);
-
-            $this->view('buku/index', $data);
-
         }
 
         public function tambah(){

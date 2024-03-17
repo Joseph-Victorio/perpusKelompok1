@@ -75,7 +75,7 @@
 				<div class="left">
                 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Tambah Data Pengembalian</h1>
-          <form role="form1" action="<?=BASEURL ?>//pengembalian/simpanPengembalian" method="post" enctype="multipart/form-data">  
+          <form role="form1" action="<?=BASEURL ?>/pengembalian/simpanPengembalian" method="post" enctype="multipart/form-data">  
 <table>
                  <div class = "edit">
                     <div class ="form-group">
@@ -92,8 +92,8 @@
                     class="form-control" placeholder="Judul Buku..." required>
                     </div>
                     <div class ="form-group">
-                    <label for="idmahasiswa">Nama Mahasiswa: </label>
-                    <input type="text"   name="idmahasiswa" 
+                    <label for="id_mhs">Nama Mahasiswa: </label>
+                    <input type="text"   name="id_mhs" 
                     class="form-control" placeholder="Nama Mahasiswa..." required>
                     </div>
               <div class="box=footer">

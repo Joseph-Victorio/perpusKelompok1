@@ -82,7 +82,7 @@
 								<div class="panel-header">
 									<p>Data Barang</p>
 
-									<h2><?=$data['Buku']?></h2>
+									
 
 								</div>
 								<div class="card-panel">
@@ -100,7 +100,7 @@
 								<div class="panel-header">
 									<p>Data Mahasiswa</p>
 
-                  <h2><?=$data['Mahasiswa']?></h2>
+                  
 
 								</div>
                 <div class="card-panel">
@@ -118,7 +118,7 @@
 								<div class="panel-header">
 									<p>Data Peminjaman</p>
 
-                  <h2><?=$data['Peminjaman']?></h2>
+                  
 
 								</div>
                 <div class="card-panel">
@@ -136,7 +136,7 @@
 								<div class="panel-header">
 									<p>Data Pengembalian</p>
 
-                  <h2><?=$data['Pengembalian']?></h2>
+                  
 
 								</div>
                 <div class="card-panel">

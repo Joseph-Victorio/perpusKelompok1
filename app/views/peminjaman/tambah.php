@@ -97,8 +97,8 @@
                     class="form-control" placeholder="Judul Buku..." required>
                     </div>
                     <div class ="form-group">
-                    <label for="idmahasiswa">Nama Mahasiswa: </label>
-                    <input type="text"   name="idmahasiswa" 
+                    <label for="id_mhs">Nama Mahasiswa: </label>
+                    <input type="text"   name="id_mhs" 
                     class="form-control" placeholder="Nama Mahasiswa..." required>
                     </div>
                      
