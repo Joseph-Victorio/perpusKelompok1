@@ -1,4 +1,3 @@
-
 <?php 
 
 class Mahasiswa_model{
@@ -22,10 +21,9 @@ class Mahasiswa_model{
         $this->db->bind(':id', $id);
         return $this->db->single();
     }
-
     public function getMahasiswaNameById($id){
-        $this->db->query("SELECT * FROM".$this->table."WHERE id_mhs = :id_mhs");
-        $this->db->bind(":id_mhs", $id);
+        $this->db->query("SELECT nama_mhs FROM ".$this->table." WHERE id_mhs = :id_mhs");
+        $this->db->bind(':id_mhs', $id);
         return $this->db->single()['nama_mhs'];
     }
 
@@ -42,4 +40,3 @@ class Mahasiswa_model{
         $this->db->execute();
     }
 }
-
