@@ -10,8 +10,9 @@
 
         public function tambah(){
             $data['judul'] = 'Tambah Buku';
+            //$data['buku'] = $this->model('Buku_model')->tambahBuku();  
             $this->view('templates/header', $data);
-            $this->view('buku/create');
+            $this->view('buku/tambah');
             $this->view('templates/footer');
         }
 

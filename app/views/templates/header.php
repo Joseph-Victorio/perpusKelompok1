@@ -15,8 +15,8 @@
 			<span class="text">Perpustakaan Kanan</span>
 		</a>
 		<ul class="side-menu top">
-			<li class="active">	
-				<a aria-current="page" href="<?=BASEURL;?>/admin">
+			<li class="active">
+				<a aria-current="page" href="<?=BASEURL;?>/dashboard">
 					<i class='bx bxs-home' ></i>
 					<span class="text">Dashboard</span>
 				</a>

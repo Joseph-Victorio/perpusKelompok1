@@ -2,11 +2,15 @@
 
 class User_model{
     private $table = 'admin';
+
     private $db; 
+
+
 
     public function __construct() {
         $this->db = new Database;
     }
+
 
     //Method verifikasi login
     public function verify_login($username, $password) {
@@ -36,4 +40,5 @@ class User_model{
         $this->db->bind(':username', $username);
         return $this->db->single();
     }
+    
 }
