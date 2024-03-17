@@ -3,7 +3,10 @@
 class Pengembalian extends Controller{
     public function index(){
         $data['judul'] = 'Halaman Pengembalian Buku';
-        $data['buku']= $this->model('Pengembalian_model')->getAllPengembalian();
+        $data['pengembalian']= $this->model('Pengembalian_model')->getAllPengembalian();
+        $data['admin'] = $this->model('Admin_model');
+        $data['buku'] = $this->model('Buku_Model');
+        $data['mahasiswa'] = $this->model('Mahasiswa_model');
         $this->view('templates/header', $data);
         $this->view('pengembalian/index', $data);
     }

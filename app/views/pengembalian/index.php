@@ -29,13 +29,13 @@
         <th>Nama Mahasiswa</th>
         <th>Opsi</th>
     </tr>
-    <?php foreach($data['buku'] as $buku) :          ?>
+    <?php foreach($data['pengembalian'] as $kembali) :          ?>
     <tr>
-        <td><?=$buku['id_pengembalian'];?></td>
-        <td><?=$buku['tgl_pengembalian'];?></td>
-        <td><?=$buku['nama_admin'];?></td>
-        <td><?=$buku['judul_buku'];?></td>
-        <td><?=$buku['nama_mhs'];?></td>
+        <td><?=$kembali['id_pengembalian'];?></td>
+        <td><?=$kembali['tgl_pengembalian'];?></td>
+        <td><?=$data['admin']->getAdminNameById($kembali['id_admin']);?></td>
+        <td><?=$data['buku']->getBukuNameById($kembali['id_buku']);?></td>
+        <td><?=$data['mahasiswa']->getMahasiswaNameById($kembali['id_mhs']);?></td>
         <td>
             <a href="<?= BASEURL ?>/pengembalian/delete/<?= $buku['id_pengembalian']?>"  onclick="confirm('Hapus data Pengembalian?')"><i class='bx bxs-trash' style='color:#ff0000'  ></i></a>
         </td>

@@ -29,14 +29,14 @@
         <th>Nama Mahasiswa</th>
         <th>Opsi</th>
     </tr>
-    <?php foreach($data['buku'] as $buku) :          ?>
+    <?php foreach($data['peminjaman'] as $pinjam) :          ?>
     <tr>
-        <td><?=$buku['id_peminjaman'];?></td>
-        <td><?=$buku['tgl_pinjam'];?></td>
-        <td><?=$buku['tgl_kembali'];?></td>
-        <td><?=$buku['nama_admin'];?></td>
-        <td><?=$buku['judul_buku'];?></td>
-        <td><?=$buku['nama_mhs'];?></td>
+        <td><?=$pinjam['id_peminjaman'];?></td>
+        <td><?=$pinjam['tanggal_pinjam'];?></td>
+        <td><?=$pinjam['tanggal_kembali'];?></td>
+        <td><?=$data['admin']->getAdminNameById($pinjam['id_admin']);?></td>
+        <td><?=$data['buku']->getBukuNameById($pinjam['id_buku']);?></td>
+        <td><?=$data['mahasiswa']->getMahasiswaNameById($pinjam['id_mhs']);?></td>
         <td>
             <a href="<?= BASEURL ?>/peminjaman/delete/<?= $buku['id_peminjaman']?>"  onclick="confirm('Hapus data Pengembalian?')"><i class='bx bxs-trash' style='color:#ff0000'  ></i></a>
         </td>

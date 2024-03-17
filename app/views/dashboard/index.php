@@ -14,7 +14,7 @@
               <div class="col-md-3">
                 <i class="bx bxs-package"></i>
               </div>
-                  <h2>6  Barang</h2>
+                  <h2><?=$data['Buku']?></h2>
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@
               <div class="col-md-3">
                 <i class="bx bxs-package"></i>
               </div>
-                  <h2>6  Barang</h2>
+                  <h2><?=$data['Peminjaman']?></h2>
             </div>
           </div>
         </div>

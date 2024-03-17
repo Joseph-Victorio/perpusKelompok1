@@ -18,6 +18,12 @@
             return $this->db->single();
         }
 
+        public function getBukuNameById($id) {
+            $this->db->query('SELECT judul_buku FROM ' . $this->table .' WHERE id_buku = :id_buku ');
+            $this->db->bind(':id_buku', $id);
+            return $this->db->single()['judul_buku'];
+        }
+
         public function tambahBuku($data){
             $query = "INSERT INTO tb_buku VALUES(null, :judul_buku, :penulis_buku, :penerbit_buku, :tahun_terbit, :stok_buku)";
             
@@ -33,8 +39,6 @@
 
         }
         
-        
-
         public function deleteBuku($id){
             $this->db->query("DELETE FROM tb_buku WHERE id_buku = :id");
             $this->db->bind('id', $id);

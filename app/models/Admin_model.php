@@ -20,6 +20,12 @@ class Admin_model {
         return $this->db->single();
     }
 
+    public function getAdminNameById($id) {
+        $this->db->query("SELECT nama FROM ". $this->table . "WHERE id_admin = :id");
+        $this->db->bind(':id', $id);
+        return $this->db->single()['nama'];
+    }
+
     public function tambahDataAdmin($data) {
         $query = "INSERT INTO admin (nama, username, password, alamat, kontak) VALUES (:nama, :username, :password, :alamat, :kontak)";
         $this->db->query($query);

@@ -3,7 +3,7 @@
 
 class Mahasiswa_model{
    
-    private $table = 'mhs';
+    private $table = 'mahasiswa';
     private $db;
 
     public function __construct()
@@ -21,6 +21,12 @@ class Mahasiswa_model{
         $this->db->query("SELECT * FROM ".$this->table." WHERE idmahasiswa = :id");
         $this->db->bind(':id', $id);
         return $this->db->single();
+    }
+
+    public function getMahasiswaNameById($id){
+        $this->db->query("SELECT * FROM".$this->table."WHERE id_mhs = :id_mhs");
+        $this->db->bind(":id_mhs", $id);
+        return $this->db->single()['nama_mhs'];
     }
 
     public function tambahDataMahasiswa($data){

@@ -13,11 +13,6 @@ class Login extends Controller
     {
         session_start();
         if (isset($_SESSION['user_id'])) {
-            echo "<script>
-                alert('Anda Sudah Login BLOK! ngapain login lagi?! Biar apa hah?');
-                document.location.href = '" . BASEURL . "/dashboard';
-            </script>";
-        } else {
             $this->view("login/index");
         }
     }

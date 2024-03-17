@@ -16,7 +16,7 @@ class Peminjaman_model{
 
     public function tambahPeminjaman($data){
         $query = "INSERT INTO peminjaman 
-                  VALUES(null,:tgl_pinjam,:tgl_kembali, :idadmin, :idbuku, :idmahasiswa )";
+                  VALUES(null, :tgl_pinjam, :tgl_kembali, :idadmin, :idbuku, :idmahasiswa )";
         $this->db->query($query);
         $this->db->bind('tgl_pinjam', $data['tgl_pinjam']);
         $this->db->bind('tgl_kembali', $data['tgl_kembali']);
