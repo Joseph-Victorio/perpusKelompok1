@@ -37,6 +37,7 @@
         <td><?=$data['admin']->getAdminNameById($pinjam['id_admin']);?></td>
         <td><?=$data['buku']->getBukuNameById($pinjam['id_buku']);?></td>
         <td><?=$data['mahasiswa']->getMahasiswaNameById($pinjam['id_mhs']);?></td>
+        
         <td>
             <a href="<?= BASEURL ?>/peminjaman/delete/<?= $buku['id_peminjaman']?>"  onclick="confirm('Hapus data Pengembalian?')"><i class='bx bxs-trash' style='color:#ff0000'  ></i></a>
         </td>
