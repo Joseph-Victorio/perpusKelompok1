@@ -3,17 +3,17 @@
         public function index(){
             $data['judul'] = 'Data Buku';
             $data['buku'] = $this->model('Buku_model')->getAllBuku();
-            $this->view('templates/header', $data);
+
             $this->view('buku/index', $data);
-            $this->view('templates/footer');
+
         }
 
         public function tambah(){
             $data['judul'] = 'Tambah Buku';
             //$data['buku'] = $this->model('Buku_model')->tambahBuku();  
-            $this->view('templates/header', $data);
+
             $this->view('buku/tambah');
-            $this->view('templates/footer');
+
         }
 
         public function simpanBuku(){

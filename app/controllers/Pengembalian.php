@@ -7,12 +7,12 @@ class Pengembalian extends Controller{
         $data['admin'] = $this->model('Admin_model');
         $data['buku'] = $this->model('Buku_Model');
         $data['mahasiswa'] = $this->model('Mahasiswa_model');
-        $this->view('templates/header', $data);
+
         $this->view('pengembalian/index', $data);
     }
     public function tambah(){
         $data['judul'] = 'Halaman Tambah Pengembalian Buku';
-        $this->view('templates/header', $data);
+
         $this->view('pengembalian/tambah');
     }
 

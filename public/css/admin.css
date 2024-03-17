@@ -70,7 +70,7 @@ body {
 }
 
 #sidebar .brand {
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 700;
     height: 56px;
     display: flex;
@@ -304,8 +304,249 @@ body {
 
 /* CONTENT */
 
+.card-panel .bx.bxs-book {
+    color: var(--blue);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.card-panel .bx.bxs-cog {
+    color: var(--blue);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.card-panel .bx.bxs-user {
+    color: var(--blue);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
 @media screen and (max-width: 768px) {
     #sidebar {
         width: 200px;
     }
+
+    #content {
+        width: calc(100% - 60px);
+        left: 200px;
+    }
+
+    #content nav .nav-link {
+        display: none;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 576px) {
+    #content nav form .form-input input {
+        display: none;
+    }
+
+    #content nav form .form-input button {
+        width: auto;
+        height: auto;
+        background: transparent;
+        border-radius: none;
+        color: var(--dark);
+    }
+
+    #content nav form.show .form-input input {
+        display: block;
+        width: 100%;
+    }
+
+    #content nav form.show .form-input button {
+        width: 36px;
+        height: 100%;
+        border-radius: 0 36px 36px 0;
+        color: var(--light);
+        background: var(--red);
+    }
+
+    #content nav form.show~.profile {
+        display: none;
+
+    }
+
+    #content main .box-info {
+        grid-template-columns: 1fr;
+    }
+
+    #content main .table-data .head {
+        min-width: 420px;
+    }
+
+    #content main .table-data .order table {
+        min-width: 420px;
+    }
+
+    #content main .table-data .todo .todo-list {
+        min-width: 420px;
+    }
+}
+
+/* TABLE BARANG */
+
+.tablee {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--blue);
+    color: white;
+    border: 1px solid var(--blue);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.btn:hover {
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+
+.pull-right {
+    float: right;
+}
+
+.edit {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.editt {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+.edittt {
+    background-color: var(--blue);
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edittt:hover {
+    background-color: var(--orange);
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.pemin {
+    display: inline-block;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pemin-success {
+    background-color: var(--blue);
+    color: white;
+    border: 1px solid var(--blue);
+}
+
+.pemin-danger {
+    background-color: #dc3545;
+    color: white;
+    border: 1px solid #c82333;
+}
+
+.pemin:hover {
+    opacity: 0.8;
+}
+
+/* Hapus border untuk tombol pada sel berisi tombol */
+.tablee .btn-xs {
+    border: none;
+}
+
+.baris {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+    position: relative;
+}
+
+.card-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.panel-header {
+    width: 70%;
+}
+
+.panel-header p {
+    color: black;
+    font-size: 14px;
+}
+
+.panel-header h2 {
+    margin-top: 10px;
 }

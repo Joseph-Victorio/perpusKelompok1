@@ -7,13 +7,13 @@ class Peminjaman extends Controller{
         $data['admin'] = $this->model('Admin_model');
         $data['buku'] = $this->model('Buku_model');
         $data['mahasiswa'] = $this->model('Mahasiswa_model');
-        $this->view('templates/header', $data);
+
         $this->view('peminjaman/index', $data);
     }
 
     public function tambah(){
         $data['judul'] = 'Halaman Tambah peminjaman Buku';
-        $this->view('templates/header', $data);
+
         $this->view('peminjaman/tambah');
     }
 
