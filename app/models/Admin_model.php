@@ -19,9 +19,8 @@ class Admin_model {
         $this->db->bind(':id', $id);
         return $this->db->single();
     }
-
     public function getAdminNameById($id) {
-        $this->db->query("SELECT nama FROM ". $this->table . "WHERE id_admin = :id");
+        $this->db->query("SELECT nama FROM ".$this->table." WHERE id_admin = :id");
         $this->db->bind(':id', $id);
         return $this->db->single()['nama'];
     }
