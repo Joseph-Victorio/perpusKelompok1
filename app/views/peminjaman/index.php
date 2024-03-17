@@ -24,19 +24,19 @@
         <th>ID Peminjaman</th>
         <th>Tanggal Peminjaman</th>
         <th>Tanggal Pengembalian</th>
-        <th>ID Admin</th>
-        <th>ID Buku</th>
-        <th>ID Mahasiswa</th>
+        <th>Nama Admin</th>
+        <th>Judul Buku</th>
+        <th>Nama Mahasiswa</th>
         <th>Opsi</th>
     </tr>
     <?php foreach($data['buku'] as $buku) :          ?>
     <tr>
         <td><?=$buku['id_peminjaman'];?></td>
-        <td><?=$buku['tanggal_pinjam'];?></td>
-        <td><?=$buku['tanggal_kembali'];?></td>
-        <td><?=$buku['id_admin'];?></td>
-        <td><?=$buku['id_buku'];?></td>
-        <td><?=$buku['id_mhs'];?></td>
+        <td><?=$buku['tgl_pinjam'];?></td>
+        <td><?=$buku['tgl_kembali'];?></td>
+        <td><?=$buku['nama_admin'];?></td>
+        <td><?=$buku['judul_buku'];?></td>
+        <td><?=$buku['nama_mhs'];?></td>
         <td>
             <a href="<?= BASEURL ?>/peminjaman/editPeminjaman<?= $buku['id_peminjaman']?>" ><i class='bx bxs-edit-alt' style='color:#00ff13'  ></i></a>
             <a href="<?= BASEURL ?>/peminjaman/delete/<?= $buku['id_peminjaman']?>"  onclick="confirm('Hapus data Pengembalian?')"><i class='bx bxs-trash' style='color:#ff0000'  ></i></a>
