@@ -27,7 +27,7 @@ class Pengembalian_model{
     }
 
     public function delete($id){
-        $this->db->query("DELETE FROM pengembalian WHERE idpengembalian = :id");
+        $this->db->query("DELETE FROM pengembalian WHERE id_pengembalian = :id");
         $this->db->bind('id', $id);
         $this->db->execute();
 
@@ -35,7 +35,7 @@ class Pengembalian_model{
     }
 
     public function getPengembalianById($id){
-        $this->db->query("SELECT * FROM pengembalian WHERE idpengembalian = :id");
+        $this->db->query("SELECT * FROM pengembalian WHERE id_pengembalian = :id");
         $this->db->bind('id', $id);
         
         return $this->db->single();

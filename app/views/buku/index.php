@@ -25,6 +25,7 @@
         <th>penulis Buku</th>
         <th>Penerbit</th>
         <th>Tahun Terbit</th>
+        <th>Stok</th>
         <th>Opsi</th>
     </tr>
     <?php foreach($data['buku'] as $buku) :          ?>
@@ -33,9 +34,9 @@
         <td><?=$buku['penulis_buku'];?></td>
         <td><?=$buku['penerbit_buku'];?></td>
         <td><?=$buku['tahun_terbit'];?></td>
+        <td><?=$buku['stok_buku'];?></td>
         <td>
-            <a href="<?= BASEURL ?>/peminjaman/editPeminjaman<?= $buku['id_peminjaman']?>" ><i class='bx bxs-edit-alt' style='color:#00ff13'  ></i></a>
-            <a href="<?= BASEURL ?>/peminjaman/delete/<?= $buku['id_peminjaman']?>"  onclick="confirm('Hapus data Pengembalian?')"><i class='bx bxs-trash' style='color:#ff0000'  ></i></a>
+            <a href="<?= BASEURL ?>/buku/hapus/<?= $buku['id_buku']?>"  onclick="confirm('Hapus data?')"><i class='bx bxs-trash' style='color:#ff0000'  ></i></a>
         </td>
     </tr>
     <?php endforeach; ?>

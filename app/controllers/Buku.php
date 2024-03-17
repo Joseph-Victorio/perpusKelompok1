@@ -17,39 +17,18 @@
         }
 
         public function simpanBuku(){
-            if($this->model('BukuModel')->tambahBuku($_POST) > 0){
-                header('location: ' . '<?=BASE_URL?> '. '/buku/index');
+            if($this->model('Buku_model')->tambahBuku($_POST) > 0){
+                header('location: ' . '<?=BASEURL?>'. '/buku/index');
                 exit;
             }else{
-                header('location: ' . '<?=BASE_URL?> '. '/buku/index');
-                exit;
-            }
-        }
-
-        public function edit($id){
-            $data['judul'] = 'Edit Buku';
-            $data['buku'] = $this->model('BukuModel')->getBukuById($id);
-            $this->view('templates/header', $data);
-            $this->view('buku/edit', $data);
-            $this->view('templates/footer');
-        }
-
-        public function updateBuku(){
-            if($this->model('BukuModel')->updateDataBuku($_POST) > 0){
-                header('location: ' .   '<?=BASE_URL?> ' . '/buku/index');
-                exit;
-            }else{
-                header('location: ' .  '<?=BASE_URL?> ' . '/buku/index');
+                header('location: ' . '<?=BASEURL?> '. '/buku/index');
                 exit;
             }
         }
 
         public function hapus($id){
-            if($this->model('BukuModel')->deleteBuku($id) > 0){
-                header('location: ' . '<?=BASE_URL?> ' . '/buku/index');
-                exit;
-            }else{
-                header('location: ' . '<?=BASE_URL?> ' . '/buku/index');
+            if($this->model('Buku_model')->deleteBuku($id) > 0){
+                header('location:http://localhost:8080/perpuskelompok1/public/buku/');
                 exit;
             }
         }

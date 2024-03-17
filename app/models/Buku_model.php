@@ -19,36 +19,25 @@
         }
 
         public function tambahBuku($data){
-            $query = "INSERT INTO" . $this->table . "VALUES (judul_buku=:judul_buku, penulis_buku=:penulis buku, penerbit_buku=:penerbit_buku, tahun_terbit=:tahunterbit, stok_buku=:stok_buku)";
+            $query = "INSERT INTO tb_buku VALUES(null, :judul_buku, :penulis_buku, :penerbit_buku, :tahun_terbit, :stok_buku)";
+            
             $this->db->query($query);
             $this->db->bind('judul_buku', $data['judul_buku']);
             $this->db->bind('penulis_buku', $data['penulis_buku']);
             $this->db->bind('penerbit_buku', $data['penerbit_buku']);
             $this->db->bind('tahun_terbit', $data['tahun_terbit']);
             $this->db->bind('stok_buku', $data['stok_buku']);
+
             
             $this->db->execute();
-            return $this->db->rowCount();
+
         }
         
-        public function updateDataBuku($data){
-            $query = "UPDATE tb_buku SET judul_buku=:judul_buku, penulis_buku=:penulis_buku, penerbit_buku=:penerbit_buku, tahun_terbit=:tahun_terbit, stok_buku=:stok_buku WHERE id=:id";
-            $this->db->query($query);
-            $this->db->bind('id_buku', $data['id_buku']);
-            $this->db->bind('judul_buku', $data['judul_buku']);
-            $this->db->bind('penulis_buku', $data['penulis_buku']);
-            $this->db->bind('penerbit_buku', $data['penerbit_buku']);
-            $this->db->bind('tahun_terbit', $data['tahun_terbit']);
-            $this->db->bind('stok_buku', $data['stok_buku']);
-            
-            $this->db->execute();
-            return $this->db->rowCount();
-        }
+        
 
         public function deleteBuku($id){
-            $this->db->query("DELETE FROM " . $this->table . ' WHERE id_buku=:id_buku');
-            $this->db->bind('id_buku', $id);
-            
+            $this->db->query("DELETE FROM tb_buku WHERE id_buku = :id");
+            $this->db->bind('id', $id);
             $this->db->execute();
             return $this->db->rowCount();
         }

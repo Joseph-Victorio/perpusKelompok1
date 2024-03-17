@@ -5,12 +5,12 @@ class Pengembalian extends Controller{
         $data['judul'] = 'Halaman Pengembalian Buku';
         $data['buku']= $this->model('Pengembalian_model')->getAllPengembalian();
         $this->view('templates/header', $data);
-        $this->view('pengembalian-buku/index', $data);
+        $this->view('pengembalian/index', $data);
     }
     public function tambah(){
         $data['judul'] = 'Halaman Tambah Pengembalian Buku';
         $this->view('templates/header', $data);
-        $this->view('pengembalian-buku/tambah');
+        $this->view('pengembalian/tambah');
     }
 
     public function simpanPengembalian(){

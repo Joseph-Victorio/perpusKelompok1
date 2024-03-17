@@ -28,7 +28,7 @@ class Peminjaman_model{
     }
 
     public function delete($id){
-        $this->db->query("DELETE FROM peminjaman WHERE idpeminjaman = :id");
+        $this->db->query("DELETE FROM peminjaman WHERE id_peminjaman = :id");
         $this->db->bind('id', $id);
         $this->db->execute();
 

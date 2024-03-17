@@ -38,7 +38,6 @@
         <td><?=$buku['judul_buku'];?></td>
         <td><?=$buku['nama_mhs'];?></td>
         <td>
-            <a href="<?= BASEURL ?>/peminjaman/editPeminjaman<?= $buku['id_peminjaman']?>" ><i class='bx bxs-edit-alt' style='color:#00ff13'  ></i></a>
             <a href="<?= BASEURL ?>/peminjaman/delete/<?= $buku['id_peminjaman']?>"  onclick="confirm('Hapus data Pengembalian?')"><i class='bx bxs-trash' style='color:#ff0000'  ></i></a>
         </td>
     </tr>

@@ -15,17 +15,17 @@
         <br>
         <div class="flex text-center">
             <label for="idamdin">Nama yang meminjamkan Admin: </label>
-            <input type="number" name="idadmin" id="idadmin">
+            <input type="text" name="idadmin" id="idadmin">
         </div>
         <br>
         <div class="flex text-center">
             <label for="idbuku">Judul Buku: </label>
-            <input type="number" name="idbuku" id="idbuku">
+            <input type="text" name="idbuku" id="idbuku">
         </div>
         <br>
         <div class="flex text-center">
             <label for="idmahasiswa">Nama Mahasiswa: </label>
-            <input type="number" name="idmahasiswa" id="idmahasiswa">
+            <input type="text" name="idmahasiswa" id="idmahasiswa">
         </div>
         <br>
         <br>

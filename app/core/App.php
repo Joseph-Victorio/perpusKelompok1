@@ -2,7 +2,7 @@
 
 
 class App{
-    protected $controller = 'pengembalian';
+    protected $controller = 'peminjaman';
     protected $method = 'index';
     protected $params = [];
 

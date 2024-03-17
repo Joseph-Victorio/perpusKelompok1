@@ -5,6 +5,7 @@
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="<?=BASEURL?>/css/admin.css">
     <link rel="stylesheet" href="<?=BASEURL?>/css/style.css">
+    <link rel="stylesheet" href="<?=BASEURL?>/css/dashboard.css">
 	
 </head>
 <body>
@@ -40,7 +41,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="<?=BASEURL;?>/pengembalian-buku">
+				<a href="<?=BASEURL;?>/pengembalian">
 					<i class='bx bxs-book' ></i>
 					<span class="text">Pengembalian</span>
 				</a>
