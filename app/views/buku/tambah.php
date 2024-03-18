@@ -20,8 +20,8 @@
 					<i class='bx bxs-home' ></i>
 					<span class="text">Dashboard</span>
 				</a>
-			</li class="active">
-			<li>
+			</li>
+			<li class="active">
 				<a href="<?=BASEURL;?>/buku">
                     <i class='bx bxs-book'></i>
 					<span class="text">Buku</span>
@@ -115,6 +115,6 @@
                 
 			</div>
 </section>
-  <script src="../../public/js/script.js"></script>
+<script src="../../public/js/script.js"></script>
 </body>
 </html>
