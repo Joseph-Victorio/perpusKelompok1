@@ -80,7 +80,7 @@
 						<div class="card-body">
 							<div class="card-panel">
 								<div class="panel-header">
-									<p>Data Barang</p>
+									<p>Data&nbsp; Buku</p>
 
 									
 
