@@ -1,4 +1,3 @@
-
 <?php
 
 class Login extends Controller
@@ -46,5 +45,3 @@ class Login extends Controller
         }
     }
 }
-
-

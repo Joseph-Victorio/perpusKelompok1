@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -32,6 +32,6 @@
   </form>
   </div>
   <img src="<?= BASEURL ?>/img/curve.svg" class="w-100 z-1" alt="">
+  <script src="../public/js/script.js"></script>
 </body>
-
 </html>

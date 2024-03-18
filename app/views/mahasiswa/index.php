@@ -22,13 +22,13 @@
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
-			<li class="active">
+			<li>
 				<a href="<?=BASEURL;?>/buku">
                     <i class='bx bxs-book'></i>
 					<span class="text">Buku</span>
 				</a>
 			</li>
-			<li>
+			<li  class="active">
 				<a href="<?=BASEURL;?>/mahasiswa">
 					<i class='bx bxs-user' ></i>
 					<span class="text">Mahasiswa</span>
@@ -112,6 +112,6 @@
 		</div>
 		</div>
         </section>
-  <script src="../../assets/js/script.js"></script>
+		<script src="../public/js/script.js"></script>
 </body>
 </html>
